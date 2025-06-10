@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "block_pricing_mains",
+  "info": {
+    "singularName": "block-pricing-main",
+    "pluralName": "block-pricing-mains",
+    "displayName": "block_pricing_main"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "plans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription-plan.subscription-plan"
+    }
+  }
+}

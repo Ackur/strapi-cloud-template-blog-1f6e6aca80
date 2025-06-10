@@ -64,6 +64,22 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface UiComponentsDefaultButton extends Struct.ComponentSchema {
+  collectionName: 'components_ui_components_default_buttons';
+  info: {
+    displayName: 'default button';
+    icon: 'apps';
+  };
+  attributes: {
+    as: Schema.Attribute.Enumeration<['button', 'a', 'nuxt-link']> &
+      Schema.Attribute.DefaultTo<'button'>;
+    attrs: Schema.Attribute.JSON;
+    icon: Schema.Attribute.String;
+    outline: Schema.Attribute.Boolean;
+    text: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -72,6 +88,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'ui-components.default-button': UiComponentsDefaultButton;
     }
   }
 }

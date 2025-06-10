@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "block_features_mains",
+  "info": {
+    "singularName": "block-features-main",
+    "pluralName": "block-features-mains",
+    "displayName": "block_features_main"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feature.feature"
+    }
+  }
+}
